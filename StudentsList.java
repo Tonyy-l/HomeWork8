@@ -1,6 +1,5 @@
 package HW8;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,8 +8,11 @@ import fmi.informatics.extending.Student;
 public class StudentsList<T extends Student> {
 
 	public static void StuList() {
-		List<Student> List = new ArrayList<>();
-		Student.StudentGenerator.make();
+		List<Student> List = Arrays.asList(
+				Student.StudentGenerator.make(),
+				Student.StudentGenerator.make(),
+				Student.StudentGenerator.make());
+		
 
 		List.forEach(
 				(student) -> System.out.println("Име: " + student.getName() + "Университет: " + student.getUniversity()
